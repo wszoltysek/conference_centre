@@ -1,24 +1,22 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <a href="/room/add">Dodaj salę</a>
-    <a href="/room/search">Szukaj wolnej sali</a>
     <br/>
     <table>
         <tr>
             <td>Nazwa sali</td>
-            <td>Status</td>
-            <td>Akcje</td>
+{#            <td>Status</td>#}
+            <td>Opcje</td>
         </tr>
         {% for room in rooms %}
             <tr>
                 <td>
                     <a href="/room/{{ room.id }}">{{ room.name }}</a>
                 </td>
-                <td>NIE ZNANY</td>
+{#                <td>NIE ZNANY</td>#}
                 <td>
-                    <a href="/room/modify/{{ room.id }}">Modyfikacja</a>
-                    <a href="/room/delete/{{ room.id }}">Kasowanie</a>
+                    <a href="/room/modify/{{ room.id }}">Modyfikuj</a>
+                    <a href="/room/delete/{{ room.id }}">Usuń</a>
                 </td>
             </tr>
         {% endfor %}

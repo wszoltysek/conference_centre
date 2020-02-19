@@ -1,25 +1,25 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h2>Szczegoły sali</h2>
+    <h2>Sala:</h2>
     <ul>
-        <li>Nazwa sali: {{ room.name }}</li>
+        <li>Nazwa: {{ room.name }}</li>
         <li>Pojemność: {{ room.capacity }}</li>
         <li>Rzutnik: {{ room.projector }}</li>
     </ul>
-
-    <h2>Aktualne rezerwacje</h2>
+    <h5>Aktualne rezerwacje:</h5>
     <ul>
     {% for reservation in reservations %}
 {#        <li>{{ reservation.date|date: 'Y-m-d' }}</li>#}
-        <li>{{ reservation.date }}</li>
+        <li>{{ reservation.date }} {{ reservation.comment }}</li>
     {% endfor %}
     </ul>
-
+    <br>
+    <h5>Dodaj:</h5>
     <form method="post" action="/room/reserve/{{ room.id }}">
         {%  csrf_token %}
-        <input type="date" name="date" placeholder="Data rezeracji">
-        <textarea name="comment" placeholder="Komentarz"></textarea>
+        <input type="date" name="date" placeholder="Data rezeracji"><br>
+        <textarea name="comment" placeholder="Komentarz"></textarea><br>
         <input type="submit" name="Dodaj rezerwacje">
     </form>
 {% endblock %}
