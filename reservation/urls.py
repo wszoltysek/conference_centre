@@ -21,10 +21,12 @@ from main_app.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('main-page/', main_page),
-    # path('room/new/', Room.as_view()),
-    # path('room/modify/<int:id>', Modify.as_view()),
-    # path('room/delete/<int:id>', room_delete),
-    # path('show-rooms/', show_rooms),
+    path('', main_page),
+    path('room/search/', search_room),
+    path('room/add/', AddRoom.as_view()),
+    path('room/modify/<int:id>', ModifyRoom.as_view()),
+    path('room/delete/<int:id>', delete_room),
+    path('room/<int:id>', show_room),
+    path('room/reserve/<int:id>', ReserveRoom.as_view()),
 
 ]

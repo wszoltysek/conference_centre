@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Szczegoły sali</h2>
+    <ul>
+        <li>Nazwa sali: {{ room.name }}</li>
+        <li>Pojemność: {{ room.capacity }}</li>
+        <li>Rzutnik: {{ room.projector }}</li>
+    </ul>
+
+    <h2>Rezerwcje</h2>
+    <a href="/room/reserve/{{ room.id }}">Dodaj rezerwacje</a>
+    <ul>
+    {% for reservation in reservations %}
+{#        <li>{{ reservation.date|date: 'Y-m-d' }}</li>#}
+        <li>{{ reservation.date }}</li>
+    {% endfor %}
+    </ul>
+{% endblock %}

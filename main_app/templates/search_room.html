@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Wyszukiwanie sali</h2>
+    <form method="get" action="/room/search/">
+        <label for="name">Nazwa:</label>
+        <input type="text" id="name" name="name" placeholder="Nazwa sali" value="{{ name }}">
+        <label for="min_capacity">Minimalna pojemność:</label>
+        <input type="text" id="min_capacity" name="min_capacity" placeholder="Minimalna pojemność" value="{{ min_capacity }}">
+        <label for="projector">Rzutnik?:</label>
+        <input type="checkbox" id="projector" name="projector" {% if projector == 'on' %}checked="checked"{% endif %}>
+        <label for="date">Dzień:</label>
+        <input type="date" id="date" name="date">
+        <input type="submit" name="submit" value="Szukaj">
+        {%  csrf_token %}
+    </form>
+
+    {% if rooms %}
+        <ul>
+        {% for room in rooms %}
+            <li>{{ room.name }}</li>
+        {% endfor %}
+        </ul>
+    {% endif %}
+{% endblock %}
