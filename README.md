@@ -13,8 +13,9 @@ Functionalities:
 
 ## Author
 
-* **Wojciech Szołtysek** - [GitHub Profile](https://github.com/djse7en)
+**Wojciech Szołtysek** - project author 
+[GitHub Profile](https://github.com/wszoltysek/), [LinkedIn Profile](https://www.linkedin.com/in/wszoltysek/)
 
 ## License
 
-To be added.
+[MIT License](https://choosealicense.com/licenses/mit/)
