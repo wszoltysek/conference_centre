@@ -18,3 +18,5 @@ Simply app where user can add, reserve and manage rooms in conference centre.
 ## License
 
 [MIT License](https://choosealicense.com/licenses/mit/)
+
+test
