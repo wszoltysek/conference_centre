@@ -1,16 +1,15 @@
 # Project Reservation
 
-Project developed in Django 2.2.6 and Python 3.7.
-Functionalities:
+My first project developed in Django 2.2.6 and Python 3.7.
 
-* To be added.
+Simply app where user can add, reserve and manage rooms in conference centre.
 
 ## Built With
 
 * [PyCharm](https://www.jetbrains.com/pycharm/) - Python IDE for developers
 * [Django 2.2.6](https://www.djangoproject.com//) -  Project framework
 * [Python 3.7](https://www.python.org/) - Coding language
-
+* [Bootstrap Frontend](https://startbootstrap.com/)
 ## Author
 
 **Wojciech Szołtysek** - project author 

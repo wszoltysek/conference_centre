@@ -6,17 +6,7 @@ import datetime
 
 def main_page(request):
     rooms = Room.objects.all()
-    # statuses = {}
-    # today = datetime.datetime.now().strftime("%Y-%m-%d")
-    # for room in rooms:
-    #     reservations = Reservation.objects.filter(date=today, reserve=room.id)
-    #     has_reservation = reservations.count() > 0
-    #     statuses[room.id] = has_reservation
-
-    return render(request, 'main_page.html', {
-        "rooms": rooms,
-        # "statuses": statuses,
-    })
+    return render(request, 'main_page.html', {"rooms": rooms, })
 
 
 def delete_room(request, id):
@@ -37,6 +27,7 @@ def show_room(request, id):
         "room": room,
         "reservations": reservations
     })
+
 
 def search_room(request):
     if 'submit' not in request.GET:
@@ -132,9 +123,9 @@ class AddRoom(View):
             projector = False
 
         room = Room.objects.create(
-            name = name,
-            capacity = capacity,
-            projector = projector
+            name=name,
+            capacity=capacity,
+            projector=projector
         )
         room.save()
 
