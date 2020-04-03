@@ -1,6 +1,6 @@
 # Conference Centre
 
-My first project developed in Django 2.2.6 and Python 3.7.
+My first project developed in Django framework.
 
 Simply app where user can add, reserve and manage rooms in conference centre.
 
