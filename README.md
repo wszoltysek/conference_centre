@@ -2,7 +2,7 @@
 
 My first project developed in Django framework.
 
-Simply app where user can add, reserve and manage rooms in conference centre.
+Simple app where user can add, reserve and manage rooms in conference centre.
 
 ## Built With
 
